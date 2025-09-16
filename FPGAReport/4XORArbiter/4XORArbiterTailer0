@@ -1,0 +1,67 @@
+----------------
+; Command Info ;
+----------------
+Report Path: Found 1 paths. Longest delay is 6.075 
+
+Tcl Command:
+    report_path -multi_corner -file 4XORArbiterTailer0 -panel_name {Report Path} -from [get_pins {puf_inst|start_pulse|q}] -to [get_ports {tailer0}] -npaths 1
+
+Options:
+    -from [get_pins {puf_inst|start_pulse|q}] 
+    -to [get_ports {tailer0}] 
+    -npaths 1 
+    -multi_corner 
+    -panel_name "Report Path" 
+    -file_name "4XORArbiterTailer0" 
+
+Delay Model:
+    Slow 1200mV 85C Model
+
++------------------------------------------+
+; Summary of Paths                         ;
++-------+------------------------+---------+
+; Delay ; From Node              ; To Node ;
++-------+------------------------+---------+
+; 6.075 ; puf_inst|start_pulse|q ; tailer0 ;
++-------+------------------------+---------+
+
+Path #1: Delay is 6.075
+===============================================================================
++------------------------------------+
+; Path Summary                       ;
++-----------+------------------------+
+; Property  ; Value                  ;
++-----------+------------------------+
+; From Node ; puf_inst|start_pulse|q ;
+; To Node   ; tailer0                ;
+; Delay     ; 6.075                  ;
++-----------+------------------------+
+
++-----------------------------------------------------------------------------------+
+; Statistics                                                                        ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Data Delay             ; 6.075 ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;       ; 1     ;             ;            ;       ;       ;
+; Physical Delays        ;       ;       ;             ;            ;       ;       ;
+;  IC                    ;       ; 2     ; 2.592       ; 43         ; 1.182 ; 1.410 ;
+;  Cell                  ;       ; 3     ; 3.483       ; 57         ; 0.000 ; 3.123 ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++----------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                    ;
++---------+---------+----+------+--------+--------------------+--------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location           ; Element                                                ;
++---------+---------+----+------+--------+--------------------+--------------------------------------------------------+
+; 6.075   ; 6.075   ;    ;      ;        ;                    ; data path                                              ;
+;   0.000 ;   0.000 ;    ;      ; 6      ; FF_X13_Y13_N25     ; puf_inst|start_pulse|q                                 ;
+;   1.182 ;   1.182 ; RR ; IC   ; 1      ; LCCOMB_X17_Y15_N16 ; puf_inst|\buildarbiter1:127:MuxGate_i|result~0|datac   ;
+;   1.542 ;   0.360 ; RR ; CELL ; 1      ; LCCOMB_X17_Y15_N16 ; puf_inst|\buildarbiter1:127:MuxGate_i|result~0|combout ;
+;   2.952 ;   1.410 ; RR ; IC   ; 1      ; IOOBUF_X10_Y18_N23 ; tailer0~output|i                                       ;
+;   6.075 ;   3.123 ; RR ; CELL ; 1      ; IOOBUF_X10_Y18_N23 ; tailer0~output|o                                       ;
+;   6.075 ;   0.000 ; RR ; CELL ; 0      ; PIN_15             ; tailer0                                                ;
++---------+---------+----+------+--------+--------------------+--------------------------------------------------------+
+
+

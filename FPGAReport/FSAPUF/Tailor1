@@ -1,0 +1,67 @@
+----------------
+; Command Info ;
+----------------
+Report Path: Found 1 paths. Longest delay is 5.302 
+
+Tcl Command:
+    report_path -multi_corner -file Tailor1 -panel_name {Report Path} -from [get_pins {commswitch|start_pulse|q}] -to [get_ports {tailer1}] -npaths 1
+
+Options:
+    -from [get_pins {commswitch|start_pulse|q}] 
+    -to [get_ports {tailer1}] 
+    -npaths 1 
+    -multi_corner 
+    -panel_name "Report Path" 
+    -file_name "Tailor1" 
+
+Delay Model:
+    Slow 1200mV 85C Model
+
++--------------------------------------------+
+; Summary of Paths                           ;
++-------+--------------------------+---------+
+; Delay ; From Node                ; To Node ;
++-------+--------------------------+---------+
+; 5.302 ; commswitch|start_pulse|q ; tailer1 ;
++-------+--------------------------+---------+
+
+Path #1: Delay is 5.302
+===============================================================================
++--------------------------------------+
+; Path Summary                         ;
++-----------+--------------------------+
+; Property  ; Value                    ;
++-----------+--------------------------+
+; From Node ; commswitch|start_pulse|q ;
+; To Node   ; tailer1                  ;
+; Delay     ; 5.302                    ;
++-----------+--------------------------+
+
++-----------------------------------------------------------------------------------+
+; Statistics                                                                        ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Data Delay             ; 5.302 ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;       ; 1     ;             ;            ;       ;       ;
+; Physical Delays        ;       ;       ;             ;            ;       ;       ;
+;  IC                    ;       ; 2     ; 1.719       ; 32         ; 0.555 ; 1.164 ;
+;  Cell                  ;       ; 3     ; 3.583       ; 68         ; 0.000 ; 3.123 ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                       ;
++---------+---------+----+------+--------+--------------------+-----------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location           ; Element                                                   ;
++---------+---------+----+------+--------+--------------------+-----------------------------------------------------------+
+; 5.302   ; 5.302   ;    ;      ;        ;                    ; data path                                                 ;
+;   0.000 ;   0.000 ;    ;      ; 5      ; FF_X12_Y13_N17     ; commswitch|start_pulse|q                                  ;
+;   0.555 ;   0.555 ; RR ; IC   ; 1      ; LCCOMB_X12_Y13_N26 ; commswitch|\buildarbiter2:127:MuxGate_ii|result~0|dataa   ;
+;   1.015 ;   0.460 ; RR ; CELL ; 1      ; LCCOMB_X12_Y13_N26 ; commswitch|\buildarbiter2:127:MuxGate_ii|result~0|combout ;
+;   2.179 ;   1.164 ; RR ; IC   ; 1      ; IOOBUF_X10_Y15_N23 ; tailer1~output|i                                          ;
+;   5.302 ;   3.123 ; RR ; CELL ; 1      ; IOOBUF_X10_Y15_N23 ; tailer1~output|o                                          ;
+;   5.302 ;   0.000 ; RR ; CELL ; 0      ; PIN_22             ; tailer1                                                   ;
++---------+---------+----+------+--------+--------------------+-----------------------------------------------------------+
+
+

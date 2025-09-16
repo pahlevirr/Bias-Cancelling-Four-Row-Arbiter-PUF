@@ -1,0 +1,50 @@
+Resource Utilization by Entity report for xoruf
+Thu Aug 28 09:22:51 2025
+Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Resource Utilization by Entity
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                            ;
++--------------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+-----------------------------------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node                 ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name                                                   ; Entity Name        ; Library Name ;
++--------------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+-----------------------------------------------------------------------+--------------------+--------------+
+; |xoruf                                     ; 326 (208)   ; 227 (159)                 ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 6    ; 0            ; 99 (51)      ; 110 (90)          ; 117 (35)         ; 0          ; |xoruf                                                                ; xoruf              ; work         ;
+;    |Switch_Block_2APUF:puf_inst|           ; 61 (15)     ; 12 (11)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (4)       ; 1 (1)             ; 43 (10)          ; 0          ; |xoruf|Switch_Block_2APUF:puf_inst                                    ; Switch_Block_2APUF ; work         ;
+;       |FF_Symmetrical:ArbFF1|              ; 2 (2)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; 0          ; |xoruf|Switch_Block_2APUF:puf_inst|FF_Symmetrical:ArbFF1              ; FF_Symmetrical     ; work         ;
+;       |mux2:\buildarbiter1:127:MuxGate_i|  ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0          ; |xoruf|Switch_Block_2APUF:puf_inst|mux2:\buildarbiter1:127:MuxGate_i  ; mux2               ; work         ;
+;       |mux2:\buildarbiter1:64:MuxGate_i|   ; 42 (42)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 32 (32)          ; 0          ; |xoruf|Switch_Block_2APUF:puf_inst|mux2:\buildarbiter1:64:MuxGate_i   ; mux2               ; work         ;
+;       |mux2:\buildarbiter2:127:MuxGate_ii| ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0          ; |xoruf|Switch_Block_2APUF:puf_inst|mux2:\buildarbiter2:127:MuxGate_ii ; mux2               ; work         ;
+;    |UartRx:uart_rx_inst|                   ; 51 (51)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 19 (19)      ; 16 (16)           ; 16 (16)          ; 0          ; |xoruf|UartRx:uart_rx_inst                                            ; UartRx             ; work         ;
+;    |UartTx:uart_tx_inst|                   ; 38 (38)     ; 24 (24)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (12)      ; 3 (3)             ; 23 (23)          ; 0          ; |xoruf|UartTx:uart_tx_inst                                            ; UartTx             ; work         ;
++--------------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+-----------------------------------------------------------------------+--------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
